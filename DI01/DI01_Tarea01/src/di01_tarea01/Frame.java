@@ -5,15 +5,13 @@
  */
 package di01_tarea01;
 
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
 import java.awt.event.ItemEvent;
-import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -26,11 +24,12 @@ import javax.swing.JTextField;
  */
 public class Frame extends JFrame {
 
-    private JButton[] botonesResultado = new JButton[10];
+    private Boton[] botonesResultado = new Boton[10];
 
     public Frame() {
         setTitle("Tabla de Multiplicar");
-        setSize(450, 600);
+        setSize(450, 700); // Ancho x Largo
+        setMinimumSize(new Dimension(300, 550));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel mainPanel = new JPanel(new GridBagLayout());
 
@@ -71,15 +70,15 @@ public class Frame extends JFrame {
         for (int i = 0; i <= 9; i++) {
             c.gridx = 0; // Columna
             c.gridy = i + 2; // Fila
-            panelMultiplicar.add(new JButton(String.valueOf(i)), c);
+            panelMultiplicar.add(new Boton(String.valueOf(i)), c);
 
             c.gridx = 1; // Columna
             c.gridy = i + 2; // Fila
-            panelMultiplicar.add(new JButton("="), c);
+            panelMultiplicar.add(new Boton("="), c);
 
             c.gridx = 2; // Columna
             c.gridy = i + 2; // Fila
-            JButton btn = new JButton(" ");
+            Boton btn = new Boton(" ");
             panelMultiplicar.add(btn, c);
             botonesResultado[i] = btn;
         }
@@ -128,14 +127,14 @@ public class Frame extends JFrame {
         panelSuma.add(textoResultado, c);
 
         // Botón sumar
-        JButton botonSumar = new JButton("Sumar");
+        Boton botonSumar = new Boton("Sumar");
         c.gridx = 2; // Columna
         c.gridy = 0; // Fila
-        c.gridheight = 3; // Ocupa 3 filas
-        c.weightx = 0.7; // Ocupa 55%
+        c.gridheight = 3;
+        c.weightx = 0.5;
         c.weighty = 1;
         c.fill = GridBagConstraints.BOTH;
-        c.insets = new Insets(5, 5, 5, 5);
+        c.insets = new Insets(7, 7, 7, 7);
         panelSuma.add(botonSumar, c);
 
         c = new GridBagConstraints();
@@ -161,7 +160,7 @@ public class Frame extends JFrame {
 
                 Matematica m = new Matematica(numeroMarcado);
                 for (int i = 0; i <= 9; i++) {
-                    JButton btn = botonesResultado[i];
+                    Boton btn = botonesResultado[i];
                     btn.setText(String.valueOf(m.multiplicar(i)));
                 }
 
