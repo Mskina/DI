@@ -1,0 +1,198 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package di01_tarea01;
+
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author Iván Estévez Sabucedo
+ */
+public class Frame extends JFrame {
+
+    private JButton[] botonesResultado = new JButton[10];
+
+    public Frame() {
+        setTitle("Tabla de Multiplicar");
+        setSize(450, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel mainPanel = new JPanel(new GridBagLayout());
+
+        JPanel panelMultiplicar = new JPanel(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+
+        //Título
+        JLabel textoTitulo = new JLabel("Tabla de Multiplicar");
+        textoTitulo.setFont(new Font("Arial", Font.BOLD, 24));
+        c.gridx = 0; // Columna
+        c.gridy = 0; // Fila
+        c.gridwidth = 3;
+        c.weightx = 1; // Ocupa 100%
+        c.weighty = 1;
+        c.fill = GridBagConstraints.CENTER;
+        c.insets = new Insets(5, 5, 5, 5);
+        panelMultiplicar.add(textoTitulo, c);
+
+        // ComboBox
+        JComboBox cb = new JComboBox();
+        for (int i = 0; i <= 9; i++) {
+            cb.addItem(String.valueOf(i));
+        }
+        c.gridx = 0; // Columna
+        c.gridy = 1; // Fila
+        c.gridwidth = 3;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.insets = new Insets(5, 1, 5, 1);
+        panelMultiplicar.add(cb, c);
+
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.insets = new Insets(5, 5, 5, 5);
+
+        // Tabla de multiplicar
+        for (int i = 0; i <= 9; i++) {
+            c.gridx = 0; // Columna
+            c.gridy = i + 2; // Fila
+            panelMultiplicar.add(new JButton(String.valueOf(i)), c);
+
+            c.gridx = 1; // Columna
+            c.gridy = i + 2; // Fila
+            panelMultiplicar.add(new JButton("="), c);
+
+            c.gridx = 2; // Columna
+            c.gridy = i + 2; // Fila
+            JButton btn = new JButton(" ");
+            panelMultiplicar.add(btn, c);
+            botonesResultado[i] = btn;
+        }
+
+        JPanel panelSuma = new JPanel(new GridBagLayout());
+        c = new GridBagConstraints();
+
+        c.gridwidth = 1;
+        c.weighty = 1;
+
+        // Texto número + resultado
+        c.weightx = 0.1;  // Para las 3
+        c.fill = GridBagConstraints.HORIZONTAL; // Para las 3
+        c.insets = new Insets(0, 5, 0, 5); // Para las 3
+
+        c.gridx = 0; // Columna
+        c.gridy = 0; // Fila        
+        panelSuma.add(new JLabel("Número 1: "), c);
+
+        c.gridx = 0; // Columna
+        c.gridy = 1; // Fila
+        panelSuma.add(new JLabel("Número 2: "), c);
+
+        c.gridx = 0; // Columna
+        c.gridy = 2; // Fila
+        panelSuma.add(new JLabel("Resultado"), c);
+
+        // Áreas de texto
+        c.weightx = 0.2;
+        c.weighty = 1;
+        c.insets = new Insets(0, 5, 0, 5);
+
+        JTextField textoNumero1 = new JTextField(5);
+        c.gridx = 1; // Columna
+        c.gridy = 0; // Fila
+        panelSuma.add(textoNumero1, c);
+
+        JTextField textoNumero2 = new JTextField(5);
+        c.gridx = 1; // Columna
+        c.gridy = 1; // Fila
+        panelSuma.add(textoNumero2, c);
+
+        JTextField textoResultado = new JTextField(5);
+        c.gridx = 1; // Columna
+        c.gridy = 2; // Fila
+        panelSuma.add(textoResultado, c);
+
+        // Botón sumar
+        JButton botonSumar = new JButton("Sumar");
+        c.gridx = 2; // Columna
+        c.gridy = 0; // Fila
+        c.gridheight = 3; // Ocupa 3 filas
+        c.weightx = 0.7; // Ocupa 55%
+        c.weighty = 1;
+        c.fill = GridBagConstraints.BOTH;
+        c.insets = new Insets(5, 5, 5, 5);
+        panelSuma.add(botonSumar, c);
+
+        c = new GridBagConstraints();
+        c.weightx = 0.5;
+        c.weighty = 0.5;
+
+        // Juntamos los dos paneles
+        c.gridx = 0; // Columna
+        c.gridy = 0; // Fila
+        c.fill = GridBagConstraints.BOTH;
+        mainPanel.add(panelMultiplicar, c);
+
+        c.gridx = 0; // Columna
+        c.gridy = 1; // Fila        
+        mainPanel.add(panelSuma, c);
+        add(mainPanel);
+
+        // LISTENERS
+        cb.addItemListener((e) -> {
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                String item = (String) e.getItem();
+                int numeroMarcado = Integer.parseInt(item);
+
+                Matematica m = new Matematica(numeroMarcado);
+                for (int i = 0; i <= 9; i++) {
+                    JButton btn = botonesResultado[i];
+                    btn.setText(String.valueOf(m.multiplicar(i)));
+                }
+
+                System.out.println("Número seleccionado: " + item);
+            }
+        });
+
+        botonSumar.addActionListener((e) -> {
+            if (!textoNumero1.getText().matches("[+-]?\\d+")
+                    || !textoNumero2.getText().matches("[+-]?\\d+")) {
+                JOptionPane.showMessageDialog(mainPanel, "Recuerda: para sumar hacen falta dos números", "¡Oh, no!", HEIGHT);
+            }
+            int coeficiente = Integer.parseInt(textoNumero1.getText());
+            Matematica m = new Matematica(coeficiente);
+
+            textoResultado.setText(String.valueOf(m.sumar(Integer.parseInt(textoNumero2.getText()))));
+
+            System.out.println("Clic");
+        });
+
+        textoResultado.addActionListener(ae -> {
+            if (!textoNumero1.getText().matches("[+-]?\\d+")
+                    || !textoNumero2.getText().matches("[+-]?\\d+")) {
+                JOptionPane.showMessageDialog(mainPanel, "Recuerda: para sumar hacen falta dos números", "¡Oh, no!", HEIGHT);
+            }
+            int coeficiente = Integer.parseInt(textoNumero1.getText());
+            Matematica m = new Matematica(coeficiente);
+
+            textoResultado.setText(String.valueOf(m.sumar(Integer.parseInt(textoNumero2.getText()))));
+        }
+        );
+
+    }
+}
