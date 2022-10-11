@@ -19,20 +19,27 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- *
+ * Clase Frame, que será la que usemos para dibujar la calculadora
  * @author Iván Estévez Sabucedo
  */
 public class Frame extends JFrame {
 
+    // Creamos un array de botones para mostrar los resultados de la multiplicación
     private Boton[] botonesResultado = new Boton[10];
-
+    
+    /**
+     * Constructor
+     */
     public Frame() {
         setTitle("Tabla de Multiplicar");
         setSize(450, 700); // Ancho x Largo
         setMinimumSize(new Dimension(300, 550));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        // Panel principal, en el que irá toda la interfaz
         JPanel mainPanel = new JPanel(new GridBagLayout());
 
+        // Panel de la multiplicación (título, selector y botones de resultado)
         JPanel panelMultiplicar = new JPanel(new GridBagLayout());
 
         GridBagConstraints c = new GridBagConstraints();
@@ -42,11 +49,11 @@ public class Frame extends JFrame {
         textoTitulo.setFont(new Font("Arial", Font.BOLD, 24));
         c.gridx = 0; // Columna
         c.gridy = 0; // Fila
-        c.gridwidth = 3;
-        c.weightx = 1; // Ocupa 100%
-        c.weighty = 1;
-        c.fill = GridBagConstraints.CENTER;
-        c.insets = new Insets(5, 5, 5, 5);
+        c.gridwidth = 3; // Número de columnas que ocupa
+        c.weightx = 1; // % de importancia horizontal
+        c.weighty = 1; // % de importancia vertical
+        c.fill = GridBagConstraints.CENTER; // Cómo rellenar el espacio alrededor del componente
+        c.insets = new Insets(5, 5, 5, 5); // Márgenes
         panelMultiplicar.add(textoTitulo, c);
 
         // ComboBox
@@ -83,8 +90,9 @@ public class Frame extends JFrame {
             botonesResultado[i] = btn;
         }
 
+        // Panel para la operación de suma (etiquetas, textos y botón)
         JPanel panelSuma = new JPanel(new GridBagLayout());
-        c = new GridBagConstraints();
+        c = new GridBagConstraints(); // Reiniciamos los valores
 
         c.gridwidth = 1;
         c.weighty = 1;
@@ -137,11 +145,11 @@ public class Frame extends JFrame {
         c.insets = new Insets(7, 7, 7, 7);
         panelSuma.add(botonSumar, c);
 
-        c = new GridBagConstraints();
+        c = new GridBagConstraints(); // Volvemos a reiniciar
         c.weightx = 0.5;
         c.weighty = 0.5;
 
-        // Juntamos los dos paneles
+        // Juntamos los dos paneles en el main
         c.gridx = 0; // Columna
         c.gridy = 0; // Fila
         c.fill = GridBagConstraints.BOTH;
@@ -153,6 +161,7 @@ public class Frame extends JFrame {
         add(mainPanel);
 
         // LISTENERS
+        // Listener del ComboBox (saber qué opción se ha seleccionado)
         cb.addItemListener((e) -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 String item = (String) e.getItem();
@@ -163,11 +172,11 @@ public class Frame extends JFrame {
                     Boton btn = botonesResultado[i];
                     btn.setText(String.valueOf(m.multiplicar(i)));
                 }
-
-                System.out.println("Número seleccionado: " + item);
+                //System.out.println("Número seleccionado: " + item); // Comprobación por consola
             }
         });
 
+        // Listener del botón Sumar
         botonSumar.addActionListener((e) -> {
             if (!textoNumero1.getText().matches("[+-]?\\d+")
                     || !textoNumero2.getText().matches("[+-]?\\d+")) {
@@ -178,7 +187,7 @@ public class Frame extends JFrame {
 
             textoResultado.setText(String.valueOf(m.sumar(Integer.parseInt(textoNumero2.getText()))));
 
-            System.out.println("Clic");
+            //System.out.println("Clic"); // Comprobación por consola de que detectó el clic           
         });
 
         textoResultado.addActionListener(ae -> {

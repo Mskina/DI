@@ -17,20 +17,25 @@ import javax.swing.JLabel;
  */
 public class Boton extends JButton {
 
-    Boton() {
+    /**
+     * Constructor de un botón sin texto
+     */
+    public Boton() {
         super.setFont(new Font("Monoespaced", Font.BOLD, 18));
         super.setHorizontalAlignment(JLabel.CENTER);
         super.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.gray));
         super.setOpaque(true);
     }
-
-    Boton(String texto) {
+    
+    /**
+     * Constructor de un botón con texto
+     * @param texto que queremos que aparezca en el botón
+     */
+    public Boton(String texto) {
         super(texto);
         super.setHorizontalAlignment(JLabel.CENTER);
         super.setFont(new Font("Monoespaced", Font.BOLD, 18));
         super.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.gray));
-
         super.setOpaque(true);
     }
-
 }

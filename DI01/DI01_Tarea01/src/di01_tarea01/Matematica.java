@@ -6,8 +6,8 @@
 package di01_tarea01;
 
 /**
- *
- * @author mskin
+ * Operaciones matemáticas (multiplicación y suma)
+ * @author Iván Estévez Sabucedo
  */
 public class Matematica {
     private int num;
