@@ -57,7 +57,7 @@ public class Frame extends JFrame {
         panelMultiplicar.add(textoTitulo, c);
 
         // ComboBox
-        JComboBox cb = new JComboBox();
+        JComboBox<String> cb = new JComboBox<String>();
         for (int i = 0; i <= 9; i++) {
             cb.addItem(String.valueOf(i));
         }
@@ -130,6 +130,7 @@ public class Frame extends JFrame {
         panelSuma.add(textoNumero2, c);
 
         JTextField textoResultado = new JTextField(5);
+        textoResultado.setEditable(false);
         c.gridx = 1; // Columna
         c.gridy = 2; // Fila
         panelSuma.add(textoResultado, c);
@@ -190,7 +191,7 @@ public class Frame extends JFrame {
             //System.out.println("Clic"); // Comprobación por consola de que detectó el clic           
         });
 
-        textoResultado.addActionListener(ae -> {
+        textoNumero2.addActionListener(ae -> {
             if (!textoNumero1.getText().matches("[+-]?\\d+")
                     || !textoNumero2.getText().matches("[+-]?\\d+")) {
                 JOptionPane.showMessageDialog(mainPanel, "Recuerda: para sumar hacen falta dos números", "¡Oh, no!", HEIGHT);
