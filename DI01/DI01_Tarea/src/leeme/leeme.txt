@@ -1,0 +1,8 @@
+Unidad 01 de Desarrollo de interfaces
+Tarea 01
+
+En esta tarea he optado por realizar un diseño minimalista con los elementos concentrados en dos únicos paneles: datos de contacto e información de la reserva.
+
+He añadido mínimas cuestiones de lógica (no enviar con campos vacíos, que haya al menos 1 reserva, etc), pero sin realizar una validación extensa de los datos.
+
+Para la opción de Congreso, he optado por un panel que por defecto está invisible y que únicamente se visualiza si se selecciona dicha opción.

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="grupoAlojamiento">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Sal&#xf3;n Habana - Central de reservas"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="99" green="cc" red="ff" type="rgb"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="separadorTituloContacto" alignment="0" max="32767" attributes="0"/>
+          <Component id="separadorContactoReserva" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="panelReserva" max="32767" attributes="0"/>
+                  <Component id="panelContacto" max="32767" attributes="0"/>
+                  <Component id="etiquetaPrincipal" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="botonCancelar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="botonConfirmar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="etiquetaPrincipal" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="separadorTituloContacto" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="panelContacto" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="separadorContactoReserva" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="panelReserva" min="-2" pref="246" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="etiquetaPrincipal">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="cc" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Verdana" size="18" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Sal&#xf3;n Habana"/>
+        <Property name="toolTipText" type="java.lang.String" value="Nombre del establecimiento"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="separadorTituloContacto">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Separador de secciones"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="panelContacto">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Datos de contacto">
+              <Font PropertyName="font" name="Calibri" size="14" style="1"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Datos de contacto"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="14" style="1"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="etiquetaNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="textoNombre" min="-2" pref="250" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="textoTelefono" min="-2" pref="104" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="etiquetaNombre">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="11" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Nombre y apellidos"/>
+            <Property name="toolTipText" type="java.lang.String" value="Nombre y apellidos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaTelefono">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="11" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
+            <Property name="toolTipText" type="java.lang.String" value="Tel&#xe9;fono de contacto"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNombre">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Nombre y apellidos"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoNombreActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoTelefono">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Tel&#xe9;fono de contacto"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoTelefonoActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JSeparator" name="separadorContactoReserva">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Separador de secciones"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="panelReserva">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Datos de la reserva">
+              <Font PropertyName="font" name="Calibri" size="14" style="1"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Datos de la reserva"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="etiquetaFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaAsistentes" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaTipo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaRestaurante" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="spinnerFecha" alignment="0" pref="110" max="32767" attributes="0"/>
+                      <Component id="comboBoxTipoEvento" alignment="0" max="32767" attributes="0"/>
+                      <Component id="comboBoxRestaurante" alignment="0" max="32767" attributes="0"/>
+                      <Component id="spinnerAsistentes" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="panelCongreso" min="-2" pref="144" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spinnerFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaAsistentes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spinnerAsistentes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaTipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboBoxTipoEvento" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaRestaurante" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboBoxRestaurante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="panelCongreso" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="etiquetaFecha">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="11" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Fecha deseada"/>
+            <Property name="toolTipText" type="java.lang.String" value="Fecha del evento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="spinnerFecha">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Selecciona la fecha"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaAsistentes">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="11" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Asistentes"/>
+            <Property name="toolTipText" type="java.lang.String" value="Asistentes al evento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="spinnerAsistentes">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Selecciona el n&#xfa;mero de asistentes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaTipo">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="11" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Tipo de evento"/>
+            <Property name="toolTipText" type="java.lang.String" value="Tipo de evento a reservar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboBoxTipoEvento">
+          <Properties>
+            <Property name="maximumRowCount" type="int" value="3"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Selecciona el tipo de evento"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxTipoEventoActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaRestaurante">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="11" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Restaurante"/>
+            <Property name="toolTipText" type="java.lang.String" value="Tipo de restaurante"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboBoxRestaurante">
+          <Properties>
+            <Property name="maximumRowCount" type="int" value="4"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Selecciona el tipo de restaurante"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxRestauranteActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Container class="javax.swing.JLayeredPane" name="panelCongreso">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Datos del congreso">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                  <Font PropertyName="font" name="Calibri" size="12" style="1"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Panel para los datos de Congreso"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="botonSi" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="botonNo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="etiquetaAlojamiento" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="etiquetaNumHabitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="etiquetaDias" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="spinnerAlojamiento" min="-2" pref="71" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="spinnerNumHabitaciones" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="etiquetaDias" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="spinnerAlojamiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="etiquetaAlojamiento" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="botonSi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="etiquetaNumHabitaciones" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="spinnerNumHabitaciones" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="etiquetaDias">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="11" style="3"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="D&#xed;as"/>
+                <Property name="toolTipText" type="java.lang.String" value="D&#xed;as de alojamiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="spinnerAlojamiento">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Selecciona los d&#xed;as de alojamiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="etiquetaAlojamiento">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="11" style="3"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Alojamiento"/>
+                <Property name="toolTipText" type="java.lang.String" value="Selecciona que s&#xed; precisas alojamientoconfigComboTipoEvento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="botonSi">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="grupoAlojamiento"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="S&#xed;"/>
+                <Property name="toolTipText" type="java.lang.String" value="Selecciona que s&#xed; precisas alojamiento"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonSiActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="botonNo">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="grupoAlojamiento"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="No"/>
+                <Property name="toolTipText" type="java.lang.String" value="Selecciona que no precisas alojamiento"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonNoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="etiquetaNumHabitaciones">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="11" style="3"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Habitaciones"/>
+                <Property name="toolTipText" type="java.lang.String" value="N&#xfa;mero de habitaciones necesarias"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="spinnerNumHabitaciones">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Selecciona el n&#xfa;mero de habitaciones"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="botonConfirmar">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Confirmar reserva"/>
+        <Property name="toolTipText" type="java.lang.String" value="Confirma la reserva"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConfirmarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonCancelar">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Cancela la reserva"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCancelarActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
