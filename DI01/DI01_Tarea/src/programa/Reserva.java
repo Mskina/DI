@@ -5,7 +5,6 @@
  */
 package programa;
 
-import java.awt.Color;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JComboBox;
@@ -47,7 +46,7 @@ public class Reserva extends javax.swing.JDialog {
         configSpinnerAlojamiento();
         configSpinnerAsistentes();
         configSpinnerNumHabitaciones();
-        panelCongreso.setVisible(false);
+        panelCongreso.setVisible(true);
     }
 
     /**
@@ -407,9 +406,15 @@ public class Reserva extends javax.swing.JDialog {
         JComboBox cb = (JComboBox) evt.getSource();
         String opcion = (String) cb.getSelectedItem();
         if (opcion.equals(TIPO_EVENTO_CONGRESO)) {
-            panelCongreso.setVisible(true);
+            spinnerAlojamiento.setEnabled(true);
+            botonSi.setEnabled(true);
+            botonNo.setEnabled(true);
+            spinnerNumHabitaciones.setEnabled(botonSi.isSelected());
         } else {
-            panelCongreso.setVisible(false);
+            spinnerAlojamiento.setEnabled(false);
+            botonSi.setEnabled(false);
+            botonNo.setEnabled(false);
+            spinnerNumHabitaciones.setEnabled(false);
         }
 
     }//GEN-LAST:event_comboBoxTipoEventoActionPerformed
@@ -438,9 +443,13 @@ public class Reserva extends javax.swing.JDialog {
     }//GEN-LAST:event_botonNoActionPerformed
 
     private void botonConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarActionPerformed
-        if (textoNombre.getText().equals("")
-                || textoTelefono.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos sin cubrir", "Error", 0);
+        // Patrón para validar teléfonos de españa con el +34 opcional
+        String pattern = "(\\+34)?[6789][0-9]{8}";
+
+        if (textoNombre.getText().isBlank()) {
+            JOptionPane.showMessageDialog(null, "¿Has escrito tu nombre?", "Error", 0);
+        } else if (!textoTelefono.getText().matches(pattern)) {
+            JOptionPane.showMessageDialog(null, "Escribe un teléfono español", "Error", 0);
         } else {
             JOptionPane.showMessageDialog(null, "Reserva realizada", "Éxito", 1);
             dispose();
@@ -490,6 +499,10 @@ public class Reserva extends javax.swing.JDialog {
         });
     }
 
+    /**
+     * Configuramos el selector de fecha, estableciendo un formato de calendario
+     * con la fecha inicial como la actual
+     */
     private void configFecha() {
         // Variable de objeto Calendar
         Calendar calendario = Calendar.getInstance();
@@ -503,35 +516,51 @@ public class Reserva extends javax.swing.JDialog {
 
     }
 
+    /**
+     * Configuramos las opciones que aparecen al seleccionar el tipo de evento
+     */
     private void configComboTipoEvento() {
         String[] opciones = {TIPO_EVENTO_BANQUETE, TIPO_EVENTO_JORNADA, TIPO_EVENTO_CONGRESO};
-        JComboBox<String> cb = new JComboBox(opciones);
 
         for (String s : opciones) {
             comboBoxTipoEvento.addItem(s);
         }
     }
 
+    /**
+     * Configuramos las opciones que aparecen al seleccionar el tipo de comida
+     */
     private void configComboTipoRestaurante() {
         String[] opciones = {TIPO_RESTAURANTE_BUFE, TIPO_RESTAURANTE_CARTA, TIPO_RESTAURANTE_CHEF, TIPO_RESTAURANTE_NA};
-        JComboBox<String> cb = new JComboBox(opciones);
 
         for (String s : opciones) {
             comboBoxRestaurante.addItem(s);
         }
     }
 
+    /**
+     * Establecemos el el modelo del spinner para seleccionar el número de
+     * alojados
+     */
     private void configSpinnerAlojamiento() {
         SpinnerModel sm = new SpinnerNumberModel(1, 1, null, 1); //default value,lower bound,upper bound,increment by
         spinnerAlojamiento.setModel(sm);
     }
 
+    /**
+     * Establecemos el el modelo del spinner para seleccionar el número de
+     * asistentes
+     */
     private void configSpinnerAsistentes() {
         SpinnerModel sm = new SpinnerNumberModel(1, 1, null, 1); //default value,lower bound,upper bound,increment by
 
         spinnerAsistentes.setModel(sm);
     }
 
+    /**
+     * Establecemos el modelo del spinner para seleccionar el número de
+     * habitaciones
+     */
     private void configSpinnerNumHabitaciones() {
         SpinnerModel sm = new SpinnerNumberModel(1, 0, null, 1); //default value,lower bound,upper bound,increment by
         spinnerNumHabitaciones.setModel(sm);

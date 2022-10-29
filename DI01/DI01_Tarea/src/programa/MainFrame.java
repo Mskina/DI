@@ -18,9 +18,9 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // Para centrar
         setTitle("Salón Habana - Central de reservas");
-        setResizable(false);
+        setResizable(false); // Para que no pueda cambiar el tamaño de la ventana
     }
 
     /**
