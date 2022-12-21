@@ -1,0 +1,6 @@
+ventanafrase_solucion.Ventanafrase_solucion
+Ventanafrase_solucion
+ventanafrase_solucion.PanelDibujo
+ventanafrase_solucion.PanelCentral
+PanelCentral
+PanelDibujo
