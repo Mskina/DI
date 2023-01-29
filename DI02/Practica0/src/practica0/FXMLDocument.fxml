@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practica1.FXMLDocumentController">
+    <children>
+        <TextField fx:id="textField" onKeyTyped="#onKeyTyped" prefWidth="300.0" promptText="Escribe tu nombre" />
+        <ListView fx:id="listView" layoutY="30" prefWidth="300.0" />
+        <Button layoutX="315.0" layoutY="391.0" mnemonicParsing="false" onAction="#onListDelete" prefHeight="25.0" prefWidth="271.0" text="Borrar" />
+    </children>
+</AnchorPane>
