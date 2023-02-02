@@ -5,21 +5,27 @@
  */
 package interfazhotel;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 /**
  *
- * @author Agustin
+ * @author Iván Estévez Sabucedo
  */
 public class FormularioReservaController implements Initializable {
 
@@ -59,6 +65,10 @@ public class FormularioReservaController implements Initializable {
     private CheckBox checkFumador;
     @FXML
     private Label labelAviso;
+    @FXML
+    private Button botonCancelar;
+    @FXML
+    private Button botonAceptar;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -78,5 +88,19 @@ public class FormularioReservaController implements Initializable {
         } else {
             labelAviso.setVisible(false);
         }
+    }
+    
+    @FXML
+    public void handlebtnCancelar(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botonCancelar.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("FormularioPrincipal.fxml"));
+        stage.setScene(new Scene(root));
+        stage.show();  
+    }
+    
+    @FXML
+    public void handlebtnAceptar(ActionEvent event) throws IOException {
+        //TODO 
+        
     }
 }

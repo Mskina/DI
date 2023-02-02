@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author
+ * @author Iván Estévez Sabucedo
  */
 public class FormularioPrincipalController implements Initializable {
 
@@ -29,9 +29,9 @@ public class FormularioPrincipalController implements Initializable {
      * Initializes the controller class.
      */
     @FXML
-    private Button btnReservas;
+    private Button botonReservas;
     @FXML
-    private Button btnSalir;
+    private Button botonSalir;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -40,11 +40,11 @@ public class FormularioPrincipalController implements Initializable {
 
     @FXML
     public void handlebtnReservas(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btnReservas.getScene().getWindow();
+        Stage stage = (Stage) botonReservas.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("FormularioPrincipal.fxml"));
-        if (event.getSource() == btnReservas) {
+        if (event.getSource() == botonReservas) {
             //Obtener referencia a la Escena del botón         
-            stage = (Stage) btnReservas.getScene().getWindow();
+            stage = (Stage) botonReservas.getScene().getWindow();
             //cargar el otro documento, en este caso la segundo pantalla
             root = FXMLLoader.load(getClass().getResource("FormularioReserva.fxml"));
         }
@@ -52,7 +52,7 @@ public class FormularioPrincipalController implements Initializable {
         //Crear una nueva escena con raíz y establecer el escenario
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
+        stage.show();        
     }
     
     @FXML

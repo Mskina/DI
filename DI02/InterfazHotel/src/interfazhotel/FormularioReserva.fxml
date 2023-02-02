@@ -19,7 +19,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfazhotel.FormularioReservaController">
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="672.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfazhotel.FormularioReservaController">
     <children>
       <Label fx:id="labelAviso" layoutX="291.0" layoutY="478.0" prefHeight="45.0" prefWidth="367.0" text="En virtud de la ley de sanidad se informa a los clientes de que solo&#10; podrán fumar en las habitaciones reservadas para tal fin." textFill="#ff0404" />
       <GridPane layoutX="101.0" layoutY="60.0">
@@ -299,7 +299,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </RadioButton>
-            <Button mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: lightgreen;" text="Aceptar" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="12">
+            <Button fx:id="botonAceptar" defaultButton="true" mnemonicParsing="false" onAction="#handlebtnAceptar" prefWidth="80.0" style="-fx-background-color: lightgreen; -fx-border-color: black;" text="Aceptar" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="12">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
@@ -307,7 +307,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: lightcoral;" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="12">
+            <Button fx:id="botonCancelar" cancelButton="true" mnemonicParsing="false" onAction="#handlebtnCancelar" prefWidth="80.0" style="-fx-background-color: lightcoral; -fx-border-color: black;" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="12">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>

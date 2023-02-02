@@ -21,9 +21,9 @@ public class InterfazHotel extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FormularioPrincipal.fxml"));
 
         Scene scene = new Scene(root);
+        stage.setTitle("Salón Havana - Iván Estévez");
         stage.setScene(scene);
-        stage.show();
-        
+        stage.show();        
     }
 
     /**

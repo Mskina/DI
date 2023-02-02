@@ -3,22 +3,33 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfazhotel.FormularioPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfazhotel.FormularioPrincipalController">
     <stylesheets>
         <URL value="@formularioprincipal.css" />
     </stylesheets>
    <children>
-      <DialogPane layoutX="26.0" layoutY="30.0" prefHeight="327.0" prefWidth="542.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+      <DialogPane layoutX="26.0" layoutY="30.0" prefHeight="327.0" prefWidth="542.0" style="-fx-background-color: lightblue;" />
+      <ImageView fitHeight="246.0" fitWidth="378.0" layoutX="116.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@DI02_CONT_R29_hotel.jpg" />
+            <Image url="@img.jpg" />
          </image>
+         <effect>
+            <DropShadow />
+         </effect>
       </ImageView>
-      <Button fx:id="btnReservas" layoutX="340.0" layoutY="77.0" mnemonicParsing="false" onAction="#handlebtnReservas" text="Reservas" />
-      <Button fx:id="btnSalir" layoutX="340.0" layoutY="135.0" mnemonicParsing="false" onAction="#handlebtnSalir" text="Salir" />
+      <Button fx:id="botonReservas" defaultButton="true" layoutX="430.0" layoutY="324.0" mnemonicParsing="false" onAction="#handlebtnReservas" style="-fx-background-color: limegreen; -fx-border-color: black;" text="Reservas" />
+      <Button fx:id="botonSalir" cancelButton="true" layoutX="116.0" layoutY="324.0" mnemonicParsing="false" onAction="#handlebtnSalir" style="-fx-background-color: darksalmon; -fx-border-color: black;" text="Salir" />
+      <Label layoutX="227.0" layoutY="24.0" text="Salón Havana" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
