@@ -19,6 +19,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
@@ -69,6 +70,10 @@ public class FormularioReservaController implements Initializable {
     private Button botonCancelar;
     @FXML
     private Button botonAceptar;
+    @FXML
+    private Spinner spinnerAsistentes;
+    @FXML
+    private Spinner spinnerHabitaciones;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
