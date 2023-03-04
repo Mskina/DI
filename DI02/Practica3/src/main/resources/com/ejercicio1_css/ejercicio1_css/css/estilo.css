@@ -1,0 +1,81 @@
+/*Estilo para aplicar a todos los elementos de la aplicación*/
+.root{
+    -fx-background-color:#ee82ee;
+    -fx-font-family:"serif"; //Se recomienda trabajar con familias de letra
+
+
+}
+/* Estilo de nodo, se puede aplicar a todos los botones de la aplicación con Button*/
+
+/* Estilo para todos los botones de la aplicación.
+Esta forma de aplicar es utilizando los estilos de clase*/
+
+.button {
+    -fx-font-size: 12px;
+}
+/* Estilo cuando se posiciona el ratón sobre cualquier botón */
+.button:hover {
+    -fx-font-size: 16px;
+}
+
+/* Estilo de clase para asignar la botón 1 de la segunda fila */
+.clasePropia{
+    -fx-text-fill: #ffa500;
+    -fx-font-size: 20px;
+    -fx-background-color:#ee82ee;
+}
+
+/* Estilo para botón con ID boton5 */
+#boton5 {
+    -fx-text-fill: red;
+}
+/* Estilo para botón con ID boton6 */
+#boton6{
+    -fx-text-fill: orange;
+}
+/* Estilo para botón con ID boton7 */
+#boton7{
+    -fx-text-fill: brown;
+}
+
+/* Estilo para botón con ID boton8 */
+#boton8{
+    -fx-font-size: 8px;
+    -fx-text-fill: red;
+}
+/* ?? */
+#estilo_clase_nuevo{
+    -fx-text-fill: yellow;
+    -fx-background-color: "darkslateblue";
+}
+
+/* BOTÓN LIMPIAR */
+#botonLimpiarEstilos{
+    -fx-text-fill: yellow;
+    -fx-background-color: "darkslateblue";
+}
+
+/* BOTÓN ASIGNAR */
+#botonAsignarEstilos{
+    -fx-text-fill: yellow;
+    -fx-background-color: "darkslateblue";
+}
+
+/* Clase para el botón 6 */
+.claseBoton6{
+    -fx-font-size: 15px;
+    -fx-background-color:#fcba03;
+}
+
+/* Clase para el botón 7 */
+.claseBoton7{
+    -fx-font-size: 15px;
+    -fx-background-color:#fc033d;
+}
+
+/* Clase para el botón 8 */
+.claseBoton8{
+    -fx-background-color:#fc03b1;
+}
+
+

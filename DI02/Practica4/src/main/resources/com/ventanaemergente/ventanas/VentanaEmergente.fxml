@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane  maxHeight="150.0" maxWidth="150.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventanaemergente.ventanas.VentanaEmergenteController">
+   <center>
+           <AnchorPane>
+              <children>
+                        <Button fx:id="botonCerrar" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onbotonCerrarClick" text="Cerrar" />
+              </children>
+           </AnchorPane>
+   </center>
+   <top>
+      <Label text="Esta es una ventanta modal" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
