@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="192.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.InicioSesionController">
+   <children>
+      <Label fx:id="etiquetaUsuario" layoutX="44.0" layoutY="31.0" text="Usuario">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="textoUsuario" layoutX="122.0" layoutY="31.0" onKeyTyped="#textosListener" promptText="usuario">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <Label fx:id="etiquetaContrasena" layoutX="25.0" layoutY="82.0" text="Contraseña">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <PasswordField fx:id="textoContrasena" layoutX="122.0" layoutY="82.0" onKeyTyped="#textosListener" promptText="******">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <Button fx:id="botonAceptar" defaultButton="true" disable="true" layoutX="226.0" layoutY="145.0" mnemonicParsing="false" onAction="#onBotonAceptarClick" text="Aceptar">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="botonCancelar" cancelButton="true" layoutX="121.0" layoutY="145.0" mnemonicParsing="false" onAction="#onBotonCancelarClick" text="Cancelar">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

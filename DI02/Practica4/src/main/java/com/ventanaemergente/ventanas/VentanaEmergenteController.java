@@ -32,14 +32,6 @@ public class VentanaEmergenteController {
         Stage stage = (Stage) botonCerrar.getScene().getWindow();
         stage.close();
 
-        String s = result.map(r -> {
-            try {
-                Integer n = Integer.valueOf(r);
-                return MessageFormat.format("Nice! I like {0} too!", n);
-            } catch (NumberFormatException ex) {
-                return MessageFormat.format("Unfortunately \"{0}\" is not a int!", r);
-            }
-        }).orElse("You really don't want to tell me, huh?");
 
 
 

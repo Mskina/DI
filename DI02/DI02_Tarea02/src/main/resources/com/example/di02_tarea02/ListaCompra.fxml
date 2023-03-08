@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="raiz" prefHeight="330.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.ListaCompraController">
+   <children>
+      <ImageView fitHeight="336.0" fitWidth="672.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/carro.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tablaCompra" layoutX="28.0" layoutY="33.0" prefHeight="266.0" prefWidth="251.0">
+        <columns>
+          <TableColumn fx:id="columnaNombre" prefWidth="129.0" text="Artículo" />
+          <TableColumn fx:id="columnaUnidades" prefWidth="64.0" text="Unidades" />
+            <TableColumn fx:id="columnaPrecio" prefWidth="56.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonFinalizacion" layoutX="454.0" layoutY="274.0" mnemonicParsing="false" onAction="#onBotonFinalizacionClick" text="Realizar compra">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label fx:id="etiquetaNombreCliente" layoutX="336.0" layoutY="44.0" text="¡Hola!" />
+      <Label layoutX="454.0" layoutY="121.0" text="Total:" />
+      <Label fx:id="etiquetaTotalCompra" layoutX="469.0" layoutY="158.0" />
+      <Button fx:id="botonRecuperacion" defaultButton="true" layoutX="288.0" layoutY="275.0" mnemonicParsing="false" onAction="#onBotonRecuperacionClick" text="Ver carro" />
+   </children>
+</AnchorPane>

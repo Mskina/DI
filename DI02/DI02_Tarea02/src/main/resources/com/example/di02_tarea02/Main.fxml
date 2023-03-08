@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="465.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.MainController">
+   <children>
+      <Button fx:id="botonRegistro" layoutX="231.0" layoutY="419.0" mnemonicParsing="false" onAction="#onBotonRegistroClick" text="Registrarse">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Button>
+      <ImageView fitHeight="351.0" fitWidth="537.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/landing.jpg" />
+         </image></ImageView>
+   
+       <Label fx:id="welcomeText" layoutX="196.0" layoutY="26.0" text="Supermercado LeliaMerca" />
+       <Button fx:id="botonInicioSesion" layoutX="432.0" layoutY="419.0" onAction="#onBotonInicioSesionClick" text="Iniciar sesión">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Button>
+      <Button fx:id="botonSalir" cancelButton="true" layoutX="14.0" layoutY="419.0" mnemonicParsing="false" onAction="#onBotonSalirClick" text="Salir">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+   </children>
+</AnchorPane>
