@@ -6,24 +6,26 @@ import com.example.di02_tarea02.Storage;
 import com.example.di02_tarea02.model.Cliente;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class InicioSesionController {
+public class InicioSesionController implements Initializable {
 
+    @FXML
+    private Pane raiz;
     @FXML
     private Button botonAceptar;
     @FXML
     private Button botonCancelar;
-    @FXML
-    private Label etiquetaUsuario;
-    @FXML
-    private Label etiquetaContrasena;
     @FXML
     private TextField textoUsuario;
     @FXML
@@ -84,5 +86,11 @@ public class InicioSesionController {
     protected void onBotonCancelarClick() {
         Stage stage = (Stage) botonCancelar.getScene().getWindow();
         stage.close();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Cargo la hoja de estilos
+        raiz.getStylesheets().add(MainApplication.class.getResource("css/estilo.css").toExternalForm());
     }
 }

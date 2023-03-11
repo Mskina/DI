@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="192.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.InicioSesionController">
+<AnchorPane fx:id="raiz" prefHeight="192.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.InicioSesionController">
    <children>
       <Label fx:id="etiquetaUsuario" layoutX="44.0" layoutY="31.0" text="Usuario">
          <padding>

@@ -4,6 +4,7 @@ import com.example.di02_tarea02.Alerta;
 import com.example.di02_tarea02.MainApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -13,6 +14,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Pantalla de inicio: Debe aparecer una pantalla inicial con el formato que
@@ -22,9 +25,9 @@ import java.io.IOException;
  * Debe aparecer la posibilidad de elegir entre iniciar sesión (usuarios
  * registrados), o registrarse.
  */
-public class MainController {
+public class MainController implements Initializable {
     @FXML
-    private Label welcomeText;
+    private Label etiquetaSupermercado;
     @FXML
     private Button botonInicioSesion;
     @FXML
@@ -52,6 +55,7 @@ public class MainController {
 
         } catch (IOException e) {
             Alerta.lanzarAlerta(Alert.AlertType.ERROR, e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -81,5 +85,10 @@ public class MainController {
     protected void onBotonSalirClick() {
         Stage s = (Stage) botonSalir.getScene().getWindow();
         s.close();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        etiquetaSupermercado.getStyleClass().add("etiquetaSupermercado");
     }
 }

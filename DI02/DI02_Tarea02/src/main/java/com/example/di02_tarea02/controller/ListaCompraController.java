@@ -1,6 +1,7 @@
 package com.example.di02_tarea02.controller;
 
 import com.example.di02_tarea02.Alerta;
+import com.example.di02_tarea02.MainApplication;
 import com.example.di02_tarea02.model.Articulo;
 import com.example.di02_tarea02.model.Cliente;
 import javafx.collections.FXCollections;
@@ -9,17 +10,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class ListaCompraController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ListaCompraController implements Initializable {
 
     @FXML
     private AnchorPane raiz;
-    @FXML
-    private Button botonFinalizacion;
-    @FXML
-    private Button botonRecuperacion;
     @FXML
     private Label etiquetaNombreCliente;
     @FXML
@@ -32,6 +33,14 @@ public class ListaCompraController {
     private TableColumn<Articulo, Integer> columnaUnidades;
     @FXML
     private TableColumn<Articulo, Double> columnaPrecio;
+    @FXML
+    private ImageView imagen1;
+    @FXML
+    private ImageView imagen2;
+    @FXML
+    private ImageView imagen3;
+    @FXML
+    private ImageView imagen4;
 
 
     @FXML
@@ -68,8 +77,7 @@ public class ListaCompraController {
                 Alerta.lanzarAlerta(Alert.AlertType.ERROR, e.getMessage());
             }
         }
-        etiquetaTotalCompra.setText(String.valueOf(importeTotalCompra));
-
+        etiquetaTotalCompra.setText(String.format("%.2f €",importeTotalCompra));
 
     }
 
@@ -81,5 +89,10 @@ public class ListaCompraController {
             System.out.println(">> Fin del programa.");
             System.exit(0);
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        raiz.getStylesheets().add(MainApplication.class.getResource("css/estilo.css").toExternalForm());
     }
 }

@@ -1,43 +1,30 @@
 package com.example.di02_tarea02.controller;
 
 import com.example.di02_tarea02.Alerta;
+import com.example.di02_tarea02.MainApplication;
 import com.example.di02_tarea02.Storage;
 import com.example.di02_tarea02.model.Cliente;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RegistroController implements Initializable {
 
     @FXML
+    private Pane raiz;
+    @FXML
     private Button botonEnviar;
     @FXML
     private Button botonCancelar;
     @FXML
-    private Label etiquetaUsuario;
-    @FXML
-    private Label etiquetaContrasena;
-    @FXML
-    private Label etiquetaNombre;
-    @FXML
-    private Label etiquetaDNI;
-    @FXML
-    private Label etiquetaDireccion;
-    @FXML
-    private Label etiquetaTelefono;
-    @FXML
-    private Label etiquetaFechaNacimiento;
-    @FXML
-    private Label etiquetaTamanoFamilia;
-    @FXML
-    private Label etiquetaNumTarjeta;
-    @FXML
     private TextField textoUsuario;
     @FXML
-    private TextField textoContrasena;
+    private PasswordField textoContrasena;
     @FXML
     private TextField textoNombre;
     @FXML
@@ -148,6 +135,7 @@ public class RegistroController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        raiz.getStylesheets().add(MainApplication.class.getResource("css/estilo.css").toExternalForm());
         spinnerTamanoFamilia.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1, 1));
         textoUsuario.requestFocus();

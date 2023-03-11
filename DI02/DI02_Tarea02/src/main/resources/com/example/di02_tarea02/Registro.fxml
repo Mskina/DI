@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.RegistroController">
+<AnchorPane fx:id="raiz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.di02_tarea02.controller.RegistroController">
    <children>
       <GridPane layoutX="31.0" layoutY="20.0" prefHeight="284.0" prefWidth="542.0">
         <columnConstraints>
@@ -63,11 +63,8 @@
                <GridPane.margin>
                   <Insets right="5.0" />
                </GridPane.margin></TextField>
-            <TextField fx:id="textoContrasena" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets right="5.0" />
-               </GridPane.margin></TextField>
-            <TextField fx:id="textoNombre" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <PasswordField fx:id="textoContrasena" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textoNombre" promptText="Nombre y apellidos" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets right="5.0" />
                </GridPane.margin></TextField>
@@ -75,7 +72,7 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin></TextField>
-            <TextField fx:id="textoDireccion" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+            <TextField fx:id="textoDireccion" promptText="Avenida de..." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
@@ -86,7 +83,7 @@
                <GridPane.margin>
                   <Insets right="5.0" />
                </GridPane.margin></TextField>
-            <DatePicker fx:id="selectorFechaNacimiento" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <DatePicker fx:id="selectorFechaNacimiento" editable="false" promptText="01/01/2001" GridPane.columnIndex="3" GridPane.rowIndex="5" />
             <Spinner fx:id="spinnerTamanoFamilia" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets right="5.0" />

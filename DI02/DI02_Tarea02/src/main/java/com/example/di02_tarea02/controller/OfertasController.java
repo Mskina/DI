@@ -8,12 +8,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -59,8 +57,6 @@ public class OfertasController implements Initializable {
     @FXML
     private Label etiquetaPrecioOferta4;
     @FXML
-    private Button botonComprar;
-    @FXML
     private Button botonCancelar;
 
     @FXML
@@ -72,8 +68,6 @@ public class OfertasController implements Initializable {
             s.close();
         }
     }
-
-
 
     @FXML
     private ArrayList<Articulo> obtenerListaCompra() {
@@ -143,27 +137,26 @@ public class OfertasController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        spinnerArticulo1.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
-        spinnerArticulo2.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
-        spinnerArticulo3.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
-        spinnerArticulo4.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
+        raiz.getStylesheets().add(MainApplication.class.getResource("css/estilo.css").toExternalForm());
+        spinnerArticulo1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
+        spinnerArticulo2.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
+        spinnerArticulo3.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
+        spinnerArticulo4.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0, 1));
 
         crearArticulos();
     }
 
     public void crearArticulos() {
+        String euro = " €";
+
         Articulo a1 = new Articulo();
         a1.setNombre("Caldo natural de pollo");
         a1.setPrecioFull(7.25);
         a1.setPrecioOferta(6.89);
 
         etiquetaNombre1.setText(a1.getNombre());
-        etiquetaPrecioFull1.setText(String.valueOf(a1.getPrecioFull()));
-        etiquetaPrecioOferta1.setText(String.valueOf(a1.getPrecioOferta()));
+        etiquetaPrecioFull1.setText(a1.getPrecioFull() + euro);
+        etiquetaPrecioOferta1.setText(a1.getPrecioOferta() + euro);
         spinnerArticulo1.setUserData(a1);
 
         Articulo a2 = new Articulo();
@@ -172,8 +165,8 @@ public class OfertasController implements Initializable {
         a2.setPrecioOferta(4.55);
 
         etiquetaNombre2.setText(a2.getNombre());
-        etiquetaPrecioFull2.setText(String.valueOf(a2.getPrecioFull()));
-        etiquetaPrecioOferta2.setText(String.valueOf(a2.getPrecioOferta()));
+        etiquetaPrecioFull2.setText(a2.getPrecioFull() + euro);
+        etiquetaPrecioOferta2.setText(a2.getPrecioOferta() + euro);
         spinnerArticulo2.setUserData(a2);
 
         Articulo a3 = new Articulo();
@@ -182,8 +175,8 @@ public class OfertasController implements Initializable {
         a3.setPrecioOferta(1.68);
 
         etiquetaNombre3.setText(a3.getNombre());
-        etiquetaPrecioFull3.setText(String.valueOf(a3.getPrecioFull()));
-        etiquetaPrecioOferta3.setText(String.valueOf(a3.getPrecioOferta()));
+        etiquetaPrecioFull3.setText(a3.getPrecioFull() + euro);
+        etiquetaPrecioOferta3.setText(a3.getPrecioOferta() + euro);
         spinnerArticulo3.setUserData(a3);
 
         Articulo a4 = new Articulo();
@@ -192,8 +185,8 @@ public class OfertasController implements Initializable {
         a4.setPrecioOferta(3.35);
 
         etiquetaNombre4.setText(a4.getNombre());
-        etiquetaPrecioFull4.setText(String.valueOf(a4.getPrecioFull()));
-        etiquetaPrecioOferta4.setText(String.valueOf(a4.getPrecioOferta()));
+        etiquetaPrecioFull4.setText(a4.getPrecioFull() + euro);
+        etiquetaPrecioOferta4.setText(a4.getPrecioOferta() + euro);
         spinnerArticulo4.setUserData(a4);
     }
 }

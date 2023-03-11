@@ -1,0 +1,69 @@
+/* Para toda la aplicación se emplea el color amarillo pues considero que es visualmente atractivo.
+Se trata de una tienda local, por lo que las ofertas no serán especialmente agresivas*/
+.root{
+    -fx-background-color: #F8CF05;
+    -fx-font-family: "sans-serif";
+
+
+}
+/* Estilo de nodo, se puede aplicar a todos los botones de la aplicación con Button*/
+
+/* Estilo para todos los botones de la aplicación.
+Esta forma de aplicar es utilizando los estilos de clase*/
+
+.button {
+    -fx-font-size: 12px;
+}
+/* Estilo cuando se posiciona el ratón sobre cualquier botón */
+.button:hover {
+    -fx-text-fill: #F8CF05;
+    -fx-background-color: "0730fa";
+}
+
+.label {
+    -fx-font-weight:bold;
+}
+
+#etiquetaSupermercado {
+    -fx-alignment: center;
+    -fx-font-weight:bold;
+    -fx-font-size: 22px;
+}
+
+#etiquetaPrecioFull1 {
+    -fx-underline:"true";
+}
+#etiquetaPrecioOferta1 {
+    -fx-text-fill: red;
+}
+#etiquetaPrecioFull2 {
+    -fx-underline:"true";
+}
+#etiquetaPrecioOferta2 {
+    -fx-text-fill: red;
+}
+#etiquetaPrecioFull3 {
+    -fx-underline:"true";
+}
+#etiquetaPrecioOferta3 {
+    -fx-text-fill: red;
+}
+#etiquetaPrecioFull4 {
+    -fx-underline:"true";
+}
+#etiquetaPrecioOferta4 {
+    -fx-text-fill: red;
+}
+
+/* Pantalla de la lista de la compra */
+#etiquetaNombreCliente {
+    -fx-font-weight:bold;
+}
+
+/* IMAGE */
+#imagen1:hover, #imagen2:hover, #imagen3:hover, #imagen4:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+    -fx-opacity: 0.9;
+}
