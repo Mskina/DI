@@ -16,8 +16,10 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("Main.fxml"));
+
         Scene scene = new Scene(fxmlLoader.load(), 537, 465);
         scene.getStylesheets().add(getClass().getResource("css/estilo.css").toExternalForm());
+
         stage.setTitle("Supermercado LeliaMerca");
         stage.setScene(scene);
         stage.show();
