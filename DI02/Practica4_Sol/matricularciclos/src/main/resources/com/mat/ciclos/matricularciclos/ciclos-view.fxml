@@ -101,49 +101,6 @@
       <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="600.0" GridPane.rowIndex="1">
          <children>
             <TitledPane fx:id="panelModulos" expanded="false">
-               <content>
-                  <HBox>
-                     <children>
-                        <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="600.0">
-                           <children>
-                              <CheckBox fx:id="psProcesos" mnemonicParsing="false" onAction="#onChangeModulos" text="PSP">
-                                 <opaqueInsets>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </opaqueInsets>
-                                 <FlowPane.margin>
-                                    <Insets bottom="20.0" left="5.0" right="20.0" top="20.0" />
-                                 </FlowPane.margin>
-                              </CheckBox>
-                              <CheckBox fx:id="programacion" mnemonicParsing="false" onAction="#onChangeModulos" text="PROG">
-                                 <FlowPane.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </FlowPane.margin>
-                              </CheckBox>
-                              <CheckBox fx:id="desenvolvemento" mnemonicParsing="false" onAction="#onChangeModulos" text="DI">
-                                 <FlowPane.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </FlowPane.margin>
-                              </CheckBox>
-                              <CheckBox fx:id="accesoDatos" mnemonicParsing="false" onAction="#onChangeModulos" text="AD">
-                                 <FlowPane.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </FlowPane.margin>
-                              </CheckBox>
-                              <CheckBox fx:id="dispMoviles" mnemonicParsing="false" onAction="#onChangeModulos" text="DM">
-                                 <FlowPane.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </FlowPane.margin>
-                              </CheckBox>
-                              <CheckBox fx:id="baseDatos" mnemonicParsing="false" onAction="#onChangeModulos" text="BD">
-                                 <FlowPane.margin>
-                                    <Insets bottom="20.0" left="20.0" right="5.0" top="20.0" />
-                                 </FlowPane.margin>
-                              </CheckBox>
-                           </children>
-                        </FlowPane>
-                     </children>
-                  </HBox>
-               </content>
                <graphic>
                   <Label text="Módulos Ciclo DAM" textAlignment="CENTER" textFill="#183269">
                      <font>

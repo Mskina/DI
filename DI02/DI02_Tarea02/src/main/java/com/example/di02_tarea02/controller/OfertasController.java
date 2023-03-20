@@ -122,8 +122,9 @@ public class OfertasController implements Initializable {
 
             // Creo el Scene de la lista
             Scene scene = new Scene(root);
+
             Stage stage = new Stage();
-            stage.setUserData(cliente);
+            stage.setUserData(cliente); // Asocio el cliente al stage
             stage.setTitle("Lista de la compra");
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(scene);
