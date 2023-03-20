@@ -45,6 +45,8 @@ public class HelloController implements Initializable {
                 String texto = textoLibre.getText();
                 stage.setUserData(texto);
                 stage.setResizable(false);
+
+
                 stage.setScene(scene);
 
                 stage.show();

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="panelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicio2.controller.MostrarController">
+<columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="-Infinity" prefWidth="199.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="795.0" minWidth="701.0" prefWidth="701.0" />
+</columnConstraints>
+<rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="700.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+</rowConstraints>
+<children>
+
+    <ListView fx:id="listaVistaCiudades" maxHeight="1.7976931348623157E308" prefWidth="200.0" />
+    <ImageView fx:id="imagenCiudades" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+        <viewport>
+            <Rectangle2D />
+        </viewport>
+    </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="botonLimpiarEstilo" layoutX="179.0" layoutY="38.0" mnemonicParsing="false" onAction="#OnBotonLimpiarEstiloClick" text="Limpiar estilo" />
+            <Button fx:id="botonAsignarEstilo" layoutX="486.0" layoutY="38.0" mnemonicParsing="false" onAction="#OnBotonAsignarEstiloClick" text="Asignar estilo" />
+         </children>
+      </AnchorPane>
+</children>
+</GridPane>

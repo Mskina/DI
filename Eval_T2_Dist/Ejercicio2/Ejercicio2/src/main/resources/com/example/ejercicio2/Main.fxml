@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="raiz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicio2.controller.MainController">
+    <children>
+        <Label layoutX="61.0" layoutY="90.0" text="Nombre" />
+        <Label layoutX="28.0" layoutY="141.0" text="Ciudad Origen" />
+        <Label layoutX="25.0" layoutY="192.0" text="Ciudad Destino" />
+        <TextField fx:id="textoNombre" layoutX="171.0" layoutY="86.0" promptText="Nombre y apellidos" />
+        <TextField fx:id="textoCiudadOrigen" disable="true" editable="false" layoutX="171.0" layoutY="137.0" text="Vigo" />
+        <Label layoutX="422.0" layoutY="31.0" text="Extras">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <CheckBox fx:id="checkDesayuno" layoutX="422.0" layoutY="90.0" mnemonicParsing="false" onAction="#onCheckClick" text="Desayuno" />
+        <CheckBox fx:id="checkComida" layoutX="422.0" layoutY="141.0" mnemonicParsing="false" onAction="#onCheckClick" text="Comida" />
+        <CheckBox fx:id="checkCena" layoutX="422.0" layoutY="192.0" mnemonicParsing="false" onAction="#onCheckClick" text="Cena" />
+        <Label layoutX="38.0" layoutY="249.0" text="Tarifa" textFill="#4c12dd">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textoTarifa" disable="true" editable="false" layoutX="171.0" layoutY="254.0" prefHeight="25.0" prefWidth="69.0" />
+        <Button fx:id="botonCalcular" disable="true" layoutX="428.0" layoutY="237.0" mnemonicParsing="false" onAction="#onBotonCalcularClick" text="Calcular">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="botonGuardar" layoutX="14.0" layoutY="345.0" mnemonicParsing="false" onAction="#onBotonGuardarClick" text="Guardar" />
+        <Button fx:id="botonMostrar" layoutX="262.0" layoutY="345.0" mnemonicParsing="false" onAction="#onBotonMostrarClick" text="Mostrar" />
+        <Button fx:id="botonCancelar" layoutX="506.0" layoutY="345.0" mnemonicParsing="false" onAction="#onBotonCancelarClick" text="Cancelar" />
+      <ChoiceBox fx:id="choiceDestino" layoutX="171.0" layoutY="185.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>
