@@ -9,6 +9,7 @@ import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import ui.ContadorListenerImpl;
 
 /**
  *
@@ -50,6 +51,7 @@ public class ReproductorBean extends JPanel implements Serializable, ContadorEve
     public void setContador(ContadorBean contador) {
         this.contador = contador;
         this.contador.addContadorEventListener(this);
+        this.contador.addContadorEventListener(new ContadorListenerImpl()); // Como prueba para añadir 2 listeners
     }
     
     public void cargarEscena(List<Imagen> imagenes) {
